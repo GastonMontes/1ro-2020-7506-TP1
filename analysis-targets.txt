@@ -1,0 +1,63 @@
+### CRITERIO DE LAS PREGUNTAS FORMULADAS --> PREDECIR SI UN TWEET ES REAL O NO (TARGET)
+### Aclaracion: Todas las preguntas contienen el sufijo implicito "por target". Por ejemplo: La longitud del tweet por target?
+### Despues del analisis por campo, se tiene que repetir pero haciendo las convinaciones que se crean convenientes entre los campos
+------------------------------------------------------------------------------------------------------------------------------------
+
+
+-----------------
+UNICAMENTE TEXTO
+-----------------
+1 - La longitud del tweet? (aplicado en el finger)
+2 - La cantidad de palabras?
+3 - La cantidad de palabras por tamaño?
+4 - La frecuencia de palabras? (Se puede hacer una nube de palabras por target)
+5 - Existencia de carateres extraños? (Con esto me refiero a todo los caracteres que nosean alfanumericos)
+6 - Cantidad de caracteres de puntuacion?
+7 - Cantidad de caracteres extraños (no de puntuacion)?
+8 - Lematización? (user libreria spacy --- https://spacy.io/ o libreria nltk)
+9 - Siglas especiales ? (ejemplo: wwww o http)
+10 - Uso de mayusculas?
+11 - Excesivo uso de mayusculas? (ejemplo: 'TENEMOS UN PROBLEMA')
+12 - Uso de fechas?
+13 - Uso de numeros? (Esto es complicado porque pueden estar en las url)
+14 - Tag a usuarios? (Para este caso se busca el '@')
+15 - Hashtag? ('#')
+16 - Incluye religion?
+17 - Empieza con mayuscula?
+18 - Empieza con tag a usuario?
+18 - Empieza con hashtag?
+20 - Termina con punto?
+21 - Cantidad de tag de usuarios?
+22 - Cantidad de hashtags?
+23 - Cantidad de palabras entre caracteres extraños?
+24 - Cantidad de caracteres seguidos? (ejemplo: '???')
+25 - Gravedad del texto? (Usando la libreria afinn, se puntua del -5 al 5 /// https://nealcaren.org/lessons/wordlists/)
+26 - Genero primario del texto ? (Hay conseguir los listados correspondientes para parsear /// https://nealcaren.org/lessons/wordlists/)
+26 - Sentimiento del texto ? (Usando la libreria vader /// https://nealcaren.org/lessons/wordlists/)
+27 - Cantidad de palabras inutiles (stopwords)? (Usando libreria nltk)
+
+
+-------------------
+UNICAMENTE LOCACION
+-------------------
+1 - Nulls?
+2 - Numeros?
+3 - Paises?
+4 - Provincias / Estados?
+5 - Ciudades?
+6 - Direcciones?
+7 - Latitud / Longitud?
+8 - Abreviaturas? (ejemplo: 'Palo Alto, CA')
+9 - No es una ubicacion ? (ejemplo: 'Happily Married with 2 kids')
+10 - Caracteres extraños? (ejemplo: '|| c h i c a g o ||', 'Û¢ Views From The Six Û¢')
+11 - 
+
+
+-------------------
+UNICAMENTE KEYWORD
+-------------------
+1 - Nulls?
+2 - Numeros?
+3 - Palabras compuestas?
+4 - Lematización?
+5 - Gravedad de la keyword? (implica ponerle un puntaje. Usando la libreria afinn, se puntua del -5 al 5 /// https://nealcaren.org/lessons/wordlists/)
